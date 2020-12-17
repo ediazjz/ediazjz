@@ -9,6 +9,8 @@
 - 📫 If you want to reach me, [send me a message][twitter]
 - ⚡ Fun fact: I recently joined [#100DaysOfCode](https://www.100daysofcode.com/) and [#100DaysOfMeditation](https://www.100daysofx.com/where-x-is/meditation/)
 
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=ediazjz&count_private=true&theme=dark&show_icons=true)](https://github.com/ediazjz/github-readme-stats)
+
 [website]: https://ediazjz.dev
 [twitter]: https://twitter.com/ediazjz
 [instagram]: https://instagram.com/ediazjz
