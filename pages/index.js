@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className="container bg-blue-100">
+    <div className="min-h-screen flex flex-col justify-center items-center px-2 bg-blue-100">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
