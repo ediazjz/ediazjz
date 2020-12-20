@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
+html, body {
   padding: 0;
   margin: 0;
   font-family: 'Martel Sans', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Yantramanav', sans-serif;;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'Montserrat Alternates', sans-serif;;
 }
 
 a {
@@ -14,6 +21,31 @@ a {
   text-decoration: none;
 }
 
+a, span {
+  font-size: inherit;
+}
+
 * {
   box-sizing: border-box;
+}
+
+@layer base {
+  h1 {
+    @apply text-7xl md:text-8xl xl:text-9xl;
+  }
+  h2 {
+    @apply text-6xl md:text-7xl xl:text-8xl;
+  }
+  h3, h4 {
+    @apply text-4xl md:text-5xl xl:text-6xl;
+  }
+  h5, h6 {
+    @apply text-3xl md:text-4xl xl:text-5xl;
+  }
+  p, input, label, .btn {
+    @apply text-xl md:text-2xl;
+  }
+  .small {
+    @apply text-xs md:text-sm;
+  }
 }
