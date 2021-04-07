@@ -5,7 +5,7 @@
 - 🔭 I’m currently working on a React based SaaS app for a client
 - 🌱 I’m currently learning Next.js and Ruby on Rails
 - 👯 I’m looking to collaborate with front-end developers
-- 💬 I'm a UI/UX designer, so ask me if you got any project on mind
+- 💬 I'm learning UI/UX design, so ask me if you got any project on mind
 - 📫 If you want to reach me, [send me a message][twitter]
 - ⚡ Fun fact: I recently joined [#100DaysOfCode](https://www.100daysofcode.com/) and [#100DaysOfMeditation](https://www.100daysofx.com/where-x-is/meditation/)
 
