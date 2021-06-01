@@ -7,4 +7,12 @@ module.exports = {
       },
     ]
   },
+  async rewrites() {
+    return [
+      {
+        source: '/simpleresume',
+        destination: 'https://simpleresume.vercel.app/',
+      },
+    ]
+  },
 }
