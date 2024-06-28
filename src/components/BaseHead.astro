@@ -3,6 +3,8 @@
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
 
+import SpeedInsights from "@vercel/speed-insights/astro";
+
 interface Props {
   title: string;
   description: string;
@@ -57,3 +59,5 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<SpeedInsights />
