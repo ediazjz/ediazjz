@@ -1,0 +1,221 @@
+{
+  "basics": {
+    "name": "Edgar Díaz Jaymez",
+    "label": "UX/UI Developer",
+    "image": "",
+    "email": "iam.ediazjz@gmail.com",
+    "phone": "(228) 400-1877",
+    "url": "https://edgarjaymez.com",
+    "summary": "Self-taught UX/UI Designer and Front-end Developer with a great passion for building beautiful and usable web solutions. Wishing to contribute value to companies and clients to meet their necessities following the best standards.",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "Boca del Río",
+      "countryCode": "MX",
+      "region": "Veracruz"
+    },
+    "profiles": [
+      {
+        "network": "Instagram",
+        "username": "edgarjaymez.design",
+        "url": "https://www.instagram.com/edgarjaymez.design/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "E2 Consulting (under Blue People)",
+      "position": "UX/UI Developer",
+      "url": "https://e2.com",
+      "startDate": "2024-03-01",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Design features and screens for client projects using an existing Design System",
+        "Build the features and screens mentioned above, as well as other changes in an Angular codebase"
+      ]
+    },
+    {
+      "name": "Blue People",
+      "position": "UX/UI Designer",
+      "url": "https://www.bluepeople.com",
+      "startDate": "2023-01-09",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Design features and user flows for web-based projects and SaaS",
+        "Develop robust and customisable UI Kits and Design Systems, particularly for internal company web applications",
+        "Serve as bridge between the design team and the developer team due to past experience",
+        "Review and validate code to ensure it fits the design given",
+        "Train developers in multiple front-end subjects like styling, state management and testing"
+      ]
+    },
+    {
+      "name": "Proficient",
+      "position": "Front-end Developer / Web Designer",
+      "url": "https://www.weareproficient.com",
+      "startDate": "2021-03-22",
+      "endDate": "2023-01-06",
+      "summary": "",
+      "highlights": [
+        "Design the UI of e-commerces, blogs and web apps",
+        "Make websites with React, Next.js and Strapi as headless CMS, implementing SSG, SSR or ISR",
+        "Create e-commerces using Shopify with liquid templating or the Storefront API"
+      ]
+    },
+    {
+      "name": "Obelisk",
+      "position": "UX/UI Developer",
+      "url": "",
+      "startDate": "2020-03-15",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Design the UI of landing pages, web systems and blogs",
+        "Build responsive web systems using Astro and Next.js",
+        "Create UI Kits to keep consistency in designs and speed up development"
+      ]
+    },
+    {
+      "name": "Stackcode",
+      "position": "Jr. Front-end Developer",
+      "url": "https://www.stackcode.io",
+      "startDate": "2019-02-01",
+      "endDate": "2020-02-01",
+      "summary": "",
+      "highlights": [
+        "Create static pages using vanilla HTML, CSS and JS",
+        "Build multiple portfolios, blogs and magazine pages using WordPress.org as CMS",
+        "Prototype components in React for SaaS projects"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Coderhouse",
+      "url": "https://www.coderhouse.com/mx/certificados/63af06465e5718000efe69f0",
+      "area": "UX/UI Design Career",
+      "studyType": "Bootcamp",
+      "startDate": "2021-11-10",
+      "endDate": "2022-11-24",
+      "score": "",
+      "courses": [
+        "UX/UI Design",
+        "Advanced UX/UI Design",
+        "UX Writing",
+        "UX Research"
+      ]
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "Professional Scrum with User Experience I",
+      "date": "2023-07-11",
+      "issuer": "Scrum.org",
+      "url": "https://www.scrum.org/certificates/984550"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Figma",
+      "level": "100",
+      "keywords": ["UI", "UX", "Design", "Prototyping"]
+    },
+    {
+      "name": "Adobe XD",
+      "level": "60",
+      "keywords": ["UI", "UX", "Design", "Prototyping", "Adobe"]
+    },
+    {
+      "name": "Sketch",
+      "level": "40",
+      "keywords": ["UI", "UX", "Design", "Prototyping"]
+    },
+    {
+      "name": "HTML",
+      "level": "100",
+      "keywords": ["Web", "Declarative"]
+    },
+    {
+      "name": "CSS",
+      "level": "100",
+      "keywords": ["Web", "Styling", "UI"]
+    },
+    {
+      "name": "Sass",
+      "level": "40",
+      "keywords": ["Web", "Styling", "UI"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "80",
+      "keywords": ["Web", "Programming", "JS", "OOP", "Front-end", "Back-end"]
+    },
+    {
+      "name": "React",
+      "level": "60",
+      "keywords": ["Web", "Framework", "JS", "UI", "Front-end"]
+    },
+    {
+      "name": "Next.js",
+      "level": "60",
+      "keywords": [
+        "Web",
+        "Meta-framework",
+        "Jamstack",
+        "JS",
+        "SSR",
+        "Front-end",
+        "Back-end"
+      ]
+    },
+    {
+      "name": "Svelte",
+      "level": "60",
+      "keywords": ["Web", "Framework", "JS", "UI", "Front-end"]
+    },
+    {
+      "name": "SvelteKit",
+      "level": "40",
+      "keywords": [
+        "Web",
+        "Meta-framework",
+        "Jamstack",
+        "JS",
+        "SSR",
+        "Front-end",
+        "Back-end"
+      ]
+    },
+    {
+      "name": "Astro",
+      "level": "60",
+      "keywords": [
+        "Web",
+        "Framework",
+        "Jamstack",
+        "JS",
+        "UI",
+        "Front-end",
+        "SSR",
+        "SSG"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "B2+"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": []
+}
