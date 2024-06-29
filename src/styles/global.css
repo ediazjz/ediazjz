@@ -99,7 +99,7 @@
 
   a,
   .link {
-    @apply font-medium underline visited:text-cyan-700 hover:visited:text-cyan-900 text-red-700 hover:text-red-900;
+    @apply font-medium underline visited:text-primary-700 hover:visited:text-primary-900 text-accent hover:text-accent-700;
   }
 
   blockquote,
