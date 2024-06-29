@@ -56,6 +56,98 @@ export default {
       92: "23rem",
       96: "24rem",
     },
+    fontSize: {
+      "2xs": [
+        "0.625rem",
+        {
+          lineHeight: "0.875rem",
+        },
+      ],
+      xs: [
+        "0.75rem",
+        {
+          lineHeight: "1rem",
+        },
+      ],
+      sm: [
+        "0.875rem",
+        {
+          lineHeight: "1.125rem",
+        },
+      ],
+      md: [
+        "1rem",
+        {
+          lineHeight: "1.25rem",
+        },
+      ],
+      lg: [
+        "1.125rem",
+        {
+          lineHeight: "1.5rem",
+        },
+      ],
+      xl: [
+        "1.25rem",
+        {
+          lineHeight: "1.75rem",
+        },
+      ],
+      "2xl": [
+        "1.5rem",
+        {
+          lineHeight: "2rem",
+        },
+      ],
+      "3xl": [
+        "1.75rem",
+        {
+          lineHeight: "2.25rem",
+        },
+      ],
+      "4xl": [
+        "2rem",
+        {
+          lineHeight: "2.5rem",
+        },
+      ],
+      "5xl": [
+        "2.25rem",
+        {
+          lineHeight: "2.75rem",
+        },
+      ],
+      "6xl": [
+        "2.5rem",
+        {
+          lineHeight: "3rem",
+        },
+      ],
+      "7xl": [
+        "2.75rem",
+        {
+          lineHeight: "3.25rem",
+        },
+      ],
+      "8xl": [
+        "3rem",
+        {
+          lineHeight: "3.5rem",
+        },
+      ],
+      "9xl": [
+        "3.5rem",
+        {
+          lineHeight: "4rem",
+        },
+      ],
+      "10xl": [
+        "4rem",
+        {
+          lineHeight: "4.5rem",
+        },
+      ],
+    },
     extend: {},
   },
   plugins: [],
