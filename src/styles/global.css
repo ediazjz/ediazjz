@@ -113,27 +113,23 @@
   }
 }
 
-/* body {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
-  background-size: 100% 600px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  color: rgb(var(--gray-dark));
-  font-size: 20px;
-  line-height: 1.7;
-} */
-
-main {
-  width: 720px;
-  max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 3em 1em;
+@layer utilities {
+  .p-container {
+    @apply px-4 md:px-6 xl:px-7 2xl:px-8 gap-4 md:gap-5 xl:gap-6 2xl:gap-7;
+  }
+  .p-container-landing {
+    @apply px-8 md:px-16 xl:px-32 2xl:px-64 gap-4 md:gap-5 xl:gap-6 2xl:gap-7;
+  }
 }
 
-/* code {
+/* TODO: Check if this styling will be useful later
+body {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+} */
+
+/* TODO: Replicate with Tailwind utilities
+code {
   padding: 2px 4px;
   background-color: rgb(var(--gray-light));
   border-radius: 4px;
