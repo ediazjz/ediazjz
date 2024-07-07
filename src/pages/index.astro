@@ -8,6 +8,8 @@ import data from "../content/resume/resume.json";
 
 import EnvelopeOpen from "../components/icons/EnvelopeOpen.astro";
 import DevicePhoneMobile from "../components/icons/DevicePhoneMobile.astro";
+
+import SocialMediaIconDispatcher from "../components/SocialMediaIconDispatcher.astro";
 ---
 
 <!doctype html>
@@ -16,15 +18,17 @@ import DevicePhoneMobile from "../components/icons/DevicePhoneMobile.astro";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
 
-  <body
-    class="container p-container-landing mx-auto bg-primary h-svh flex justify-center items-start"
-  >
+  <body class="h-svh md:h-auto">
     <!-- <Header /> -->
 
     <!-- <Footer /> -->
 
-    <main class="py-12 h-full">
-      <div class="w-full text-base-light h-full flex flex-col justify-between">
+    <main
+      class="py-12 md:py-16 xl:py-20 2xl:py-24 h-full bg-primary text-on-primary"
+    >
+      <div
+        class="container p-container-landing h-full flex flex-col md:flex-row gap-4 md:gap-5 xl:gap-6 2xl:gap-7 justify-between"
+      >
         <div class="flex flex-col gap-4">
           <h1 class="display">{data.basics.name}</h1>
           <h2>{data.basics.label}</h2>
@@ -34,23 +38,35 @@ import DevicePhoneMobile from "../components/icons/DevicePhoneMobile.astro";
         </div>
 
         <ul
-          class="flex flex-col justify-end text-right gap-4 py-6 border-t border-base-light"
+          class="flex flex-col justify-end text-right gap-4 pt-6 md:pt-0 md:pb-1 border-t border-base-light md:border-none"
         >
           <li class="flex items-center justify-end gap-2">
-            <a
-              class="no-underline text-base-light"
-              href={`mailto:${data.basics.email}`}>{data.basics.email}</a
+            <a class="no-underline" href={`mailto:${data.basics.email}`}
+              >{data.basics.email}</a
             >
+
             <EnvelopeOpen />
           </li>
           <li class="flex items-center justify-end gap-2">
             <!-- TODO: Create parsing function for phone without special characters -->
-            <a
-              class="no-underline text-base-light"
-              href={`tel:${data.basics.phone}`}>{data.basics.phone}</a
+            <a class="no-underline" href={`tel:${data.basics.phone}`}
+              >{data.basics.phone}</a
             >
+
             <DevicePhoneMobile />
           </li>
+
+          {
+            data.basics.profiles.map((profile) => (
+              <li class="flex items-center justify-end gap-2">
+                <a class="no-underline " href={`${profile.url}`}>
+                  {profile.username}
+                </a>
+
+                <SocialMediaIconDispatcher network={profile.network} />
+              </li>
+            ))
+          }
         </ul>
       </div>
     </main>
