@@ -85,7 +85,7 @@
   .h5,
   h6,
   .h6 {
-    @apply font-medium;
+    @apply font-medium capitalize;
   }
 
   .display {
