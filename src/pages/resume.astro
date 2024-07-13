@@ -156,34 +156,6 @@ import { parseDate, numericLevelToDreyfus } from "../lib";
         <h2
           class="text-primary md:w-2/5 pb-0 border-b-2 md:h-fit border-primary min-w-40"
         >
-          Hard skills
-        </h2>
-
-        <ul
-          class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 xl:gap-6 w-full"
-        >
-          {
-            data.skills.map((skill) => (
-              <li class="flex items-center gap-2 md:gap-3 xl:gap-4 w-full justify-between">
-                <h3 class="h6">{skill.name}</h3>
-
-                <span class="quote text-right">
-                  {numericLevelToDreyfus(skill.level)}
-                </span>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </section>
-
-    <section class="pt-8 xl:pt-12 2xl:pt-16">
-      <div
-        class="container p-container-landing flex flex-col md:flex-row gap-4 md:gap-5 xl:gap-6 justify-between"
-      >
-        <h2
-          class="text-primary md:w-2/5 pb-0 border-b-2 md:h-fit border-primary min-w-40"
-        >
           Certificates
         </h2>
 
@@ -205,6 +177,34 @@ import { parseDate, numericLevelToDreyfus } from "../lib";
                   <span class="quote">{certificate.issuer}</span>
                 </header>
               </article>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="pt-8 xl:pt-12 2xl:pt-16">
+      <div
+        class="container p-container-landing flex flex-col md:flex-row gap-4 md:gap-5 xl:gap-6 justify-between"
+      >
+        <h2
+          class="text-primary md:w-2/5 pb-0 border-b-2 md:h-fit border-primary min-w-40"
+        >
+          Hard skills
+        </h2>
+
+        <ul
+          class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 xl:gap-6 w-full"
+        >
+          {
+            data.skills.map((skill) => (
+              <li class="flex items-center gap-2 md:gap-3 xl:gap-4 w-full justify-between">
+                <h3 class="h6">{skill.name}</h3>
+
+                <span class="quote text-right">
+                  {numericLevelToDreyfus(skill.level)}
+                </span>
+              </li>
             ))
           }
         </ul>
