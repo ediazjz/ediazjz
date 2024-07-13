@@ -45,7 +45,7 @@
 
 @layer base {
   body {
-    @apply font-outfit text-md font-light;
+    @apply font-outfit text-md font-light bg-base-light;
   }
 
   h1,
@@ -85,7 +85,7 @@
   .h5,
   h6,
   .h6 {
-    @apply font-medium;
+    @apply font-medium capitalize;
   }
 
   .display {
@@ -100,6 +100,11 @@
   a,
   .link {
     @apply font-medium underline visited:text-primary-700 hover:visited:text-primary-900 text-accent hover:text-accent-700;
+  }
+
+  .text-on-primary a,
+  .text-on-primary .link {
+    @apply visited:text-accent-50 hover:visited:text-accent-100 text-base-light hover:text-primary-100;
   }
 
   blockquote,
@@ -119,6 +124,10 @@
   }
   .p-container-landing {
     @apply px-8 md:px-16 xl:px-32 2xl:px-64 gap-4 md:gap-5 xl:gap-6 2xl:gap-7;
+  }
+
+  .text-on-primary {
+    @apply text-base-light;
   }
 }
 

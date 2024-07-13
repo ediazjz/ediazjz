@@ -1,0 +1,254 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+import data from "../content/resume/resume.json";
+
+import EnvelopeOpen from "../components/icons/EnvelopeOpen.astro";
+import DevicePhoneMobile from "../components/icons/DevicePhoneMobile.astro";
+
+import SocialMediaIconDispatcher from "../components/SocialMediaIconDispatcher.astro";
+
+import { parseDate, numericLevelToDreyfus } from "../lib";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+
+  <body class="h-svh md:h-auto">
+    <main
+      class="py-12 md:py-16 xl:py-20 2xl:py-24 h-full bg-primary text-on-primary"
+    >
+      <div
+        class="container p-container-landing h-full flex flex-col md:flex-row gap-4 md:gap-5 xl:gap-6 justify-between"
+      >
+        <div class="flex flex-col gap-4">
+          <h1 class="display">{data.basics.name}</h1>
+          <h2>{data.basics.label}</h2>
+          <p>
+            {data.basics.summary}
+          </p>
+        </div>
+
+        <ul
+          class="flex flex-col justify-end text-right gap-4 pt-6 md:pt-0 md:pb-1 border-t border-base-light md:border-none"
+        >
+          <li class="flex items-center justify-end gap-2">
+            <a class="no-underline" href={`mailto:${data.basics.email}`}
+              >{data.basics.email}</a
+            >
+
+            <EnvelopeOpen />
+          </li>
+          <li class="flex items-center justify-end gap-2">
+            <!-- TODO: Create parsing function for phone without special characters -->
+            <a class="no-underline" href={`tel:${data.basics.phone}`}
+              >{data.basics.phone}</a
+            >
+
+            <DevicePhoneMobile />
+          </li>
+
+          {
+            data.basics.profiles.map((profile) => (
+              <li class="flex items-center justify-end gap-2">
+                <a class="no-underline " href={`${profile.url}`}>
+                  {profile.username}
+                </a>
+
+                <SocialMediaIconDispatcher network={profile.network} />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </main>
+
+    <section class="pt-8 xl:pt-12 2xl:pt-16">
+      <div
+        class="container p-container-landing flex flex-col md:flex-row gap-4 md:gap-5 xl:gap-6 justify-between"
+      >
+        <h2
+          class="text-primary md:w-2/5 pb-0 border-b-2 md:h-fit border-primary min-w-40"
+        >
+          Experience
+        </h2>
+
+        <div class="flex flex-col gap-6 md:gap-7 xl:gap-8 w-full">
+          {
+            data.work.map((job) => (
+              <article class="flex flex-col gap-2 xl:gap-4">
+                <header class="flex flex-col">
+                  <div class="flex justify-between items-center w-full gap-4">
+                    <h3 class="h5">{job.position}</h3>
+
+                    <span class="flex justify-end items-center capitalize min-w-28 text-right">
+                      {parseDate(job.startDate)} -{" "}
+                      {job.endDate ? parseDate(job.endDate) : "Present"}
+                    </span>
+                  </div>
+
+                  <span class="quote">{job.name}</span>
+                </header>
+
+                <ul class="flex flex-col items-start list-disc pl-6 gap-2 2xl:gap-3">
+                  {job.highlights.map((highlight) => (
+                    <li>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-8 xl:pt-12 2xl:pt-16">
+      <div
+        class="container p-container-landing flex flex-col md:flex-row gap-4 md:gap-5 xl:gap-6 justify-between"
+      >
+        <h2
+          class="text-primary md:w-2/5 pb-0 border-b-2 md:h-fit border-primary min-w-40"
+        >
+          Education
+        </h2>
+
+        <div class="flex flex-col gap-6 md:gap-7 xl:gap-8 w-full">
+          {
+            data.education.map((item) => (
+              <article class="flex flex-col gap-2 2xl:gap-3 flex-1">
+                <header class="flex flex-col">
+                  <div class="flex justify-between items-center w-full gap-4">
+                    <h3 class="h5">{item.area}</h3>
+
+                    <span class="flex justify-end items-center capitalize min-w-28 text-right">
+                      {parseDate(item.startDate)} -{" "}
+                      {item.endDate ? parseDate(item.endDate) : "Present"}
+                    </span>
+                  </div>
+
+                  <span class="quote">{item.institution}</span>
+                </header>
+
+                <ul class="flex flex-col items-start list-disc pl-6 gap-2 2xl:gap-3">
+                  {item.courses.map((course) => (
+                    <li>
+                      <span>{course}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-8 xl:pt-12 2xl:pt-16">
+      <div
+        class="container p-container-landing flex flex-col md:flex-row gap-4 md:gap-5 xl:gap-6 justify-between"
+      >
+        <h2
+          class="text-primary md:w-2/5 pb-0 border-b-2 md:h-fit border-primary min-w-40"
+        >
+          Certificates
+        </h2>
+
+        <ul class="w-full">
+          {
+            data.certificates.map((certificate) => (
+              <article class="flex flex-col gap-2 2xl:gap-3 flex-1">
+                <header class="flex flex-col">
+                  <div class="flex justify-between items-center w-full gap-4">
+                    <h3 class="h5">
+                      <a href={certificate.url}>{certificate.name}</a>
+                    </h3>
+
+                    <span class="flex justify-end items-center capitalize min-w-28 text-right">
+                      {parseDate(certificate.date)}
+                    </span>
+                  </div>
+
+                  <span class="quote">{certificate.issuer}</span>
+                </header>
+              </article>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="pt-8 xl:pt-12 2xl:pt-16">
+      <div
+        class="container p-container-landing flex flex-col md:flex-row gap-4 md:gap-5 xl:gap-6 justify-between"
+      >
+        <h2
+          class="text-primary md:w-2/5 pb-0 border-b-2 md:h-fit border-primary min-w-40"
+        >
+          Hard skills
+        </h2>
+
+        <ul
+          class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5 xl:gap-6 w-full"
+        >
+          {
+            data.skills.map((skill) => (
+              <li class="flex items-center gap-2 md:gap-3 xl:gap-4 w-full justify-between">
+                <h3 class="h6">{skill.name}</h3>
+
+                <span class="quote text-right">
+                  {numericLevelToDreyfus(skill.level)}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <div
+      class="py-8 xl:py-12 2xl:py-16 container p-container-landing grid grid-cols-1 md:grid-cols-2 !gap-8 md:!gap-5 xl:!gap-6"
+    >
+      <section>
+        <h2
+          class="mb-4 md:mb-5 xl:mb-6 text-primary pb-0 border-b-2 md:h-fit border-primary min-w-40"
+        >
+          Soft skills
+        </h2>
+
+        <ul class="grid grid-cols-2">
+          {
+            data.softSkills.map((skill) => (
+              <li>
+                <h3 class="h6">{skill}</h3>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2
+          class="mb-4 md:mb-5 xl:mb-6 text-primary pb-0 border-b-2 md:h-fit border-primary min-w-40"
+        >
+          Languages
+        </h2><ul>
+          {
+            data.languages.map((language) => (
+              <li class="flex items-center gap-2 md:gap-3 xl:gap-4 w-full justify-between">
+                <h3 class="h6">{language.language}</h3>
+
+                <span class="quote text-right">{language.fluency}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+---
+import {
+  Behance,
+  Dribbble,
+  Figma,
+  Github,
+  Gitlab,
+  Instagram,
+} from "./icons/brands";
+
+// TODO: Let's see how to remove the string type for the data coming from JSON
+interface Props {
+  network:
+    | "Behance"
+    | "Dribbble"
+    | "Figma"
+    | "Github"
+    | "Gitlab"
+    | "Instagram"
+    | string;
+}
+
+const { network } = Astro.props;
+
+const iconMap: Record<Props["network"], any> = {
+  Behance,
+  Dribbble,
+  Figma,
+  Github,
+  Gitlab,
+  Instagram,
+};
+
+const IconComponent = iconMap[network];
+---
+
+{IconComponent && <IconComponent />}
